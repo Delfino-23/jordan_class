@@ -19,6 +19,15 @@ document.getElementById('btn-contato').addEventListener('click', function() {
   window.location.href = 'contato.html';
 });
 
+// Máscara para telefone
+document.getElementById('telefone').addEventListener('input', function(e) {
+  let v = e.target.value.replace(/\D/g, '');
+  if (v.length > 11) v = v.slice(0, 11);
+  if (v.length >= 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+  if (v.length >= 9) v = v.slice(0, 9) + '-' + v.slice(9);
+  e.target.value = v;
+});
+
 // Máscara para CPF
   document.getElementById('cpf').addEventListener('input', function(e) {
     let v = e.target.value.replace(/\D/g, '');

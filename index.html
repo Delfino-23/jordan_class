@@ -273,6 +273,22 @@
                     />
                   </div>
                   <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="telefone"
+                      name="telefone"
+                      placeholder="(99) 99999-9999"
+                      maxlength="15"
+                      pattern="\(\d{2}\) \d{4,5}-\d{5}"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, insira um telefone válido no formato (99) 99999-9999.
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="cpf" class="form-label"
                       >CPF <span class="text-danger">*</span></label
                     >
@@ -316,10 +332,9 @@
             <a class="navbar-brand" href="index.html">
               <img src="img/logo_jordan.png" alt="Logo da Escola de Dança" style="height: 48px;">
             </a>
-            <p class="mb-1">Rua Exemplo, 123 - Centro, Cidade/SP</p>
-            <p class="mb-1">CEP: 00000-000</p>
-            <p class="mb-1">Tel: (11) 99999-9999</p>
-            <p class="mb-0">contato@jordanclass.com</p>
+            <p class="mb-1">R. Vicente Ortiz de Camargo, 68 - Jardim Planalto Verde, Mogi Guaçu - SP</p>
+            <p class="mb-1">CEP: 13843-214</p>
+            <p class="mb-1">Tel: (19) 3841-3952</p>
           </div>
           <div class="col-md-4 mb-4 mb-md-0">
             <h6 class="fw-bold mb-3">Recursos</h6>
