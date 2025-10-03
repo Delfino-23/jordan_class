@@ -11,17 +11,24 @@
     />
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./contato.css" />
-    <link rel="shortcut icon" href="img/logo_jordan.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo_jordan.png" type="image/x-icon" />
     <title>Jordan Class - Login</title>
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark"
+        aria-label="Menu principal"
+      >
         <div class="container-fluid d-flex justify-content-between">
           <!-- Logo -->
           <a class="navbar-brand" href="index.html">
-            <img src="img/logo_jordan.png" alt="Logo da Escola de Dança Jordan Class" id="logo">
+            <img
+              src="img/logo_jordan.png"
+              alt="Logo da Escola de Dança Jordan Class"
+              id="logo"
+            />
           </a>
 
           <!-- Login -->
@@ -30,6 +37,7 @@
             type="button"
             id="btn-contato"
             aria-label="Abrir tela de login"
+            aria-haspopup="dialog"
           >
             Login
           </button>
@@ -38,8 +46,12 @@
     </header>
 
     <main>
-      <section class="container my-5" style="max-width: 400px">
-        <h2 class="mb-4 text-center">Login</h2>
+      <section
+        class="container my-5"
+        style="max-width: 400px"
+        aria-labelledby="titulo-login"
+      >
+        <h2 id="titulo-login" class="mb-4 text-center">Login</h2>
         <form class="needs-validation" novalidate>
           <div class="mb-3">
             <label for="loginEmail" class="form-label">E-mail</label>
@@ -51,11 +63,13 @@
               placeholder="Seu e-mail"
               required
               autocomplete="email"
+              inputmode="email"
             />
             <div class="invalid-feedback">
               Por favor, insira um e-mail válido.
             </div>
           </div>
+
           <div class="mb-3">
             <label for="loginPassword" class="form-label">Senha</label>
             <input
@@ -67,11 +81,13 @@
               required
               autocomplete="current-password"
               minlength="5"
+              inputmode="text"
             />
             <div class="invalid-feedback">
               Por favor, insira sua senha (mínimo 5 caracteres).
             </div>
           </div>
+
           <button class="btn btn-warning w-100" type="submit">Entrar</button>
         </form>
       </section>
@@ -82,9 +98,16 @@
         <div class="row">
           <div class="col-md-4 mb-4 mb-md-0">
             <a class="navbar-brand" href="index.html">
-              <img src="img/logo_jordan.png" alt="Logo da Escola de Dança" style="height: 48px;">
+              <img
+                src="img/logo_jordan.png"
+                alt="Logo da Escola de Dança"
+                style="height: 48px"
+              />
             </a>
-            <p class="mb-1">R. Vicente Ortiz de Camargo, 68 - Jardim Planalto Verde, Mogi Guaçu - SP</p>
+            <p class="mb-1">
+              R. Vicente Ortiz de Camargo, 68 - Jardim Planalto Verde, Mogi
+              Guaçu - SP
+            </p>
             <p class="mb-1">CEP: 13843-214</p>
             <p class="mb-1">Tel: (19) 3841-3952</p>
           </div>
@@ -92,17 +115,23 @@
             <h6 class="fw-bold mb-3">Recursos</h6>
             <ul class="list-unstyled">
               <li>
-                <a href="index.html#curso" class="text-white text-decoration-none"
+                <a
+                  href="index.html#curso"
+                  class="text-white text-decoration-none"
                   >Sobre o Curso</a
                 >
               </li>
               <li>
-                <a href="index.html#beneficios" class="text-white text-decoration-none"
+                <a
+                  href="index.html#beneficios"
+                  class="text-white text-decoration-none"
                   >Benefícios</a
                 >
               </li>
               <li>
-                <a href="index.html#professor" class="text-white text-decoration-none"
+                <a
+                  href="index.html#professor"
+                  class="text-white text-decoration-none"
                   >Professor</a
                 >
               </li>
@@ -135,6 +164,7 @@
             <a
               href="https://www.instagram.com/solescoladedanca/"
               target="_blank"
+              aria-label="Instagram da Sol Escola de Dança"
               class="text-white me-3 text-decoration-none"
             >
               <i class="bi bi-instagram" style="font-size: 1.3rem"></i>
@@ -143,21 +173,33 @@
         </div>
       </div>
     </footer>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
+    <!-- Toast de login -->
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
-      <div id="loginToast" class="toast align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div
+        id="loginToast"
+        class="toast align-items-center border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
         <div class="d-flex">
-          <div id="toastMsg" class="toast-body">
-            <!-- A mensagem vai ser trocada pelo JS -->
-          </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
+          <div id="toastMsg" class="toast-body"></div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Fechar"
+          ></button>
         </div>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
